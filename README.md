@@ -16,7 +16,7 @@ A dynamic Next.js application that generates interactive C4 model visualizations
 1. Clone the repository:
    ```
    git clone <repository-url>
-   cd 4cmodel
+   cd c4model
    ```
 
 2. Install dependencies:
