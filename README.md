@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# C4 Model Generator
 
-## Getting Started
+A dynamic Next.js application that generates interactive C4 model visualizations from GitHub repositories. This tool helps you understand software architecture through different levels of abstraction.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **GitHub Repository Analysis**: Enter any public GitHub repository URL, and the application will analyze its structure and generate a C4 model.
+- **Interactive Visualization**: Navigate through different levels of the C4 model by clicking on elements.
+- **Multi-level Visualization**: 
+  - **Context Level**: Shows the system and its interaction with users and external systems.
+  - **Container Level**: Shows the high-level technical components of a system.
+  - **Component Level**: Shows the internal components within a container.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```
+   git clone <repository-url>
+   cd 4cmodel
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-## Learn More
+3. Run the development server:
+   ```
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How to Use
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Enter a public GitHub repository URL in the input field.
+2. Click "Generate C4 Model" to analyze the repository.
+3. Explore the generated C4 model by clicking on elements to drill down:
+   - Click on a System to see its Containers
+   - Click on a Container to see its Components
+4. Use the navigation controls to zoom, pan, and navigate through the diagram.
+5. Use the "Back" button to return to previous levels of abstraction.
 
-## Deploy on Vercel
+## About the C4 Model
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The C4 model was created by Simon Brown and stands for Context, Containers, Components, and Code. It provides a way to create maps of your code, at different levels of detail, in the same way that you would use something like Google Maps to zoom in and out of an area.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **System Context**: A big picture view showing how the software system in scope fits into the wider IT environment
+- **Container**: A high-level view showing the technical architecture of a single software system - applications, data stores, microservices, etc.
+- **Component**: A more detailed view showing how a container is composed of multiple "components", what each of those components are, their responsibilities, and their technology/implementation details.
+- **Code**: A low-level view showing how a component is implemented, typically using UML class diagrams, entity relationship diagrams, etc.
+
+## Technologies Used
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- ReactFlow
+- Three.js
+- D3.js
+- Octokit (GitHub API client)
+
+## License
+
+MIT
